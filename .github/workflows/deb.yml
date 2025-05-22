@@ -9,17 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone Repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y devscripts debhelper dh-python python3-all
+          sudo apt install -y devscripts debhelper dh-python python3-all python3-psutil lintian
 
       - name: Build .deb Package
+        env:
+          DEBEMAIL: "anilrajrimal@gmail.com"
+          DEBFULLNAME: "Anil Raj Rimal"
+          LC_ALL: C
         run: |
-          debuild -us -uc
+          debuild -b -us -uc
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
