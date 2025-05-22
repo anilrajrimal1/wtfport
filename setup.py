@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='wtfport',
+    name='wtfport-cli',
     version='1.0.0',
     packages=['wtfport'],
     entry_points={
