@@ -25,6 +25,13 @@ jobs:
           sudo apt update
           sudo apt install -y devscripts debhelper dh-python python3-all build-essential lintian
 
+      - name: Update changelog version to match tag
+        run: |
+          TAG_VERSION=${{ github.event.inputs.tag || github.ref_name }}
+          # Remove leading 'v' if present
+          VERSION="${TAG_VERSION#v}"
+          dch --local "ci build" -v "$VERSION" --distribution unstable
+
       - name: Build .deb Package
         env:
           DEBEMAIL: "anilrajrimal@gmail.com"
@@ -33,6 +40,9 @@ jobs:
         run: |
           debuild -b -us -uc
           cp ../wtfport_*.deb .
+
+      - name: Run lintian checks
+        run: lintian --pedantic wtfport_*.deb
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -48,4 +58,3 @@ jobs:
         if: |
           (github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')) ||
           (github.event_name == 'workflow_dispatch')
-
