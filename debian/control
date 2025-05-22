@@ -1,0 +1,16 @@
+Source: wtfport
+Section: utils
+Priority: optional
+Maintainer: Anil Raj Rimal <anilrajrimal@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: wtfport
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, psutil
+Description: 🕵️ Quickly find what’s using a port
+ A tiny CLI tool that tells you which process is listening on a given TCP/UDP port.
