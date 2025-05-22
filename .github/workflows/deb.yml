@@ -25,9 +25,10 @@ jobs:
           LC_ALL: C
         run: |
           debuild -b -us -uc
+          cp ../wtfport_*.deb .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: wtfport-deb
-          path: ../wtfport_*.deb
+          path: wtfport_*.deb
