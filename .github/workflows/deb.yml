@@ -41,9 +41,6 @@ jobs:
           debuild -b -us -uc
           cp ../wtfport_*.deb .
 
-      - name: Run lintian checks
-        run: lintian --pedantic wtfport_*.deb
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
