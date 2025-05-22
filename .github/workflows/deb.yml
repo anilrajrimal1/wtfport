@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y devscripts debhelper dh-python python3-all python3-psutil lintian
+          sudo apt install -y devscripts debhelper dh-python python3-all build-essential lintian
 
       - name: Build .deb Package
         env:
