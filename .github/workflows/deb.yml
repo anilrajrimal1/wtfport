@@ -30,7 +30,7 @@ jobs:
           TAG_VERSION=${{ github.event.inputs.tag || github.ref_name }}
           # Remove leading 'v' if present
           VERSION="${TAG_VERSION#v}"
-          dch --local "ci build" -v "$VERSION" --distribution unstable
+          dch -v "$VERSION" --distribution unstable -m "ci build"
 
       - name: Build .deb Package
         env:
