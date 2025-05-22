@@ -6,7 +6,8 @@ Build-Depends: debhelper-compat (= 13),
                dh-python,
                python3-all,
                man-db,
-               python3-setuptools
+               python3-setuptools,
+               pybuild-plugin-pyproject
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
 

@@ -23,13 +23,13 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y devscripts debhelper dh-python python3-all build-essential lintian
+          sudo apt install -y devscripts debhelper dh-python python3-all build-essential lintian pybuild-plugin-pyproject
 
       - name: Update changelog version to match tag
         run: |
           TAG_VERSION=${{ github.event.inputs.tag || github.ref_name }}
           VERSION="${TAG_VERSION#v}"
-          dch -v "${VERSION}-1" --distribution unstable -m "ci build"
+          dch -v "${VERSION}-1" --distribution jammy -m "ci build"
 
       - name: Build .deb Package
         env:

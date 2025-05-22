@@ -1,7 +1,11 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --buildsystem=pybuild --with python3 -- --system pep517
+	dh $@ --buildsystem=pybuild --with python3
+
+override_dh_auto_configure:
+	dh_auto_configure -- --system=pyproject
 
 override_dh_install:
 	dh_install
+	dh_installman

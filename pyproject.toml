@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wtfport-cli"
-version = "1.0.4"
+version = "1.0.5"
 description = "Find what’s using a TCP or UDP port"
 readme = "README.md"
 license = { text = "MIT" }

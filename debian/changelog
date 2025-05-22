@@ -1,3 +1,10 @@
+wtfport (1.0.5-1) focal; urgency=medium
+
+
+  * fix deb metadata issue
+
+ -- Anil Raj Rimal <anilrajrimal@gmail.com>  Thu, 22 May 2025 16:40:22 +0545
+
 wtfport (1.0.3-1) unstable; urgency=medium
 
   * ci build
