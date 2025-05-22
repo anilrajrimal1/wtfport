@@ -45,3 +45,4 @@ wtfport-*/
 
 # GitHub artifacts
 *.zip
+env/
