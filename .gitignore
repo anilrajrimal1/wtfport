@@ -43,6 +43,19 @@ Thumbs.db
 *.upload
 wtfport-*/
 
+# debhelper, pybuild, quilt, and packaging byproducts
+.pc/
+.pybuild/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.log
+debian/*.substvars
+debian/*.debhelper
+debian/wtfport/
+debian/patches/
+debian/manpages/
+
 # GitHub artifacts
 *.zip
 env/
