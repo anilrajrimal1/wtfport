@@ -1,0 +1,28 @@
+name: Build .deb package
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y devscripts debhelper dh-python python3-all
+
+      - name: Build .deb Package
+        run: |
+          debuild -us -uc
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wtfport-deb
+          path: ../wtfport_*.deb
