@@ -32,3 +32,10 @@ jobs:
         with:
           name: wtfport-deb
           path: wtfport_*.deb
+
+      - name: Create Release and upload .deb
+        uses: ncipollo/release-action@v1.16.0
+        with:
+          artifacts: 'wtfport_*.deb'
+          tag: ${{ github.ref_name }}
+
