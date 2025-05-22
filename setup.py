@@ -1,0 +1,15 @@
+from setuptools import setup
+
+setup(
+    name='wtfport',
+    version='1.0.0',
+    packages=['wtfport'],
+    entry_points={
+        'console_scripts': [
+            'wtfport = wtfport.cli:main',
+        ],
+    },
+    install_requires=[
+        'psutil',
+    ],
+)
