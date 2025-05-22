@@ -1,5 +1,5 @@
-wtfport (1.0.2-1) unstable; urgency=medium
+wtfport (1.0.3-1) unstable; urgency=medium
 
-  * Update cli outputs
+  * ci build
 
  -- Anil Raj Rimal <anilrajrimal@gmail.com>  Thu, 22 May 2025 01:35:00 +0545

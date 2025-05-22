@@ -28,9 +28,8 @@ jobs:
       - name: Update changelog version to match tag
         run: |
           TAG_VERSION=${{ github.event.inputs.tag || github.ref_name }}
-          # Remove leading 'v' if present
           VERSION="${TAG_VERSION#v}"
-          dch -v "$VERSION" --distribution unstable -m "ci build"
+          dch -v "${VERSION}-1" --distribution unstable -m "ci build"
 
       - name: Build .deb Package
         env:
