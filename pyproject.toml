@@ -1,6 +1,6 @@
 [project]
 name = "wtfport-cli"
-version = "1.0.1"
+version = "1.0.2"
 description = "Find what’s using a TCP or UDP port"
 readme = "README.md"
 license = { text = "MIT" }
