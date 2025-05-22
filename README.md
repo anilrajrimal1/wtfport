@@ -9,11 +9,8 @@
 # wtfport
 
 [![PyPI version](https://img.shields.io/pypi/v/wtfport-cli.svg)](https://pypi.org/project/wtfport-cli)
-[![Downloads](https://img.shields.io/pypi/dm/wtfport-cli.svg)](https://pypi.org/project/wtfport-cli)
 [![Release](https://img.shields.io/github/v/release/anilrajrimal1/wtfport)](https://github.com/anilrajrimal1/wtfport/releases)
 [![License](https://img.shields.io/github/license/anilrajrimal1/wtfport)](LICENSE)
-[![Build](https://github.com/anilrajrimal1/wtfport/actions/workflows/python-package.yml/badge.svg)](https://github.com/anilrajrimal1/wtfport/actions)
-[![Python](https://img.shields.io/pypi/pyversions/wtfport-cli.svg)](https://pypi.org/project/wtfport-cli)
 
 **Discover what's binding your TCP/UDP ports with ease.**
 
