@@ -35,7 +35,7 @@ def main():
     port = int(sys.argv[1])
 
     if port < 1024 and os.geteuid() != 0:
-        print(f"⚠️  Port {port} may require root access. Try running with sudo.")
+        print(f"Port {port} may require root access. Try running with sudo.")
         sys.exit(0) 
 
     info = find_process_using_port(port)
