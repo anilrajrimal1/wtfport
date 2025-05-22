@@ -1,0 +1,4 @@
+psutil>=5.9
+build
+twine
+pytest
