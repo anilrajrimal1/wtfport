@@ -1,11 +1,10 @@
-```
-           _    __                  _   
- __      _| |_ / _|_ __   ___  _ __| |_ 
- \ \ /\ / / __| |_| '_ \ / _ \| '__| __|
-  \ V  V /| |_|  _| |_) | (_) | |  | |_ 
-   \_/\_/  \__|_| | .__/ \___/|_|   \__|
-                  |_|                   
-```
+                    _    __                  _   
+          __      _| |_ / _|_ __   ___  _ __| |_ 
+          \ \ /\ / / __| |_| '_ \ / _ \| '__| __|
+           \ V  V /| |_|  _| |_) | (_) | |  | |_ 
+            \_/\_/  \__|_| | .__/ \___/|_|   \__|
+                           |_|                   
+         
 # wtfport
 
 [![PyPI version](https://img.shields.io/pypi/v/wtfport-cli.svg)](https://pypi.org/project/wtfport-cli)
@@ -37,7 +36,7 @@ pip install wtfport-cli
 For Debian-based systems, use the `.deb` package:
 Find it in release page of this github repository.
 ```bash
-sudo dpkg -i wtfport_1.0.0-1_all.deb
+sudo dpkg -i wtfport_release-tag.deb
 ```
 
 ### From Source
@@ -67,6 +66,8 @@ wtfport 6969
   ```plaintext
   WOW! Nothing on port 6969, it's free!
   ```
+[!NOTE]
+> You might need to use `sudo` for elevated permissions
 
 ## Requirements
 
@@ -110,4 +111,3 @@ For bugs, feature requests, or questions, please file an issue on our [GitHub Is
 
 *Find the port, free the port, own the port.*  
 Happy debugging! 🐞
-```
