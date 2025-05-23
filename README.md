@@ -50,6 +50,8 @@ pip install .
 
 ## 🛠 Usage
 
+![Demo](https://github.com/user-attachments/assets/0940e93c-32ed-4006-afd6-429c0d456797)
+
 Check a port by running:
 
 ```bash
